@@ -1,0 +1,109 @@
+$white : #fff;
+$weight-600: 600;
+$font-14: 14px;
+$border-primary : 1px solid #ccc;
+$hover-list-bg: #ebf7fb;
+$hover-border: 2px solid rgb(151, 197, 253);
+$primary-box-shadow: 1px 1px 6px rgba(128, 128, 128, 0.53);
+$primary-radius: 12px;
+$gray : gray;
+
+//main styles-------------------------------
+.mainStyle {
+ width: calc(100% - 32px);
+ height: auto;
+}
+
+
+//select styles-------------------------------
+.custom-select {
+ position: relative;
+ width: 100%;
+
+ .selected {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: $border-primary;
+  border-radius: $primary-radius;
+  cursor: pointer;
+  background-color: $white;
+  justify-content: space-between;
+  font-weight: $weight-600;
+  font-size: $font-14;
+  color: $gray;
+
+  img {
+   margin-right: 10px;
+
+  }
+
+  &:hover {
+   border: $hover-border;
+   box-shadow: $primary-box-shadow;
+   outline: none;
+  }
+ }
+
+ .selectedStyle {
+  border: $hover-border;
+  outline: none;
+ }
+
+
+
+ //optionStyles-----------------------------------------
+
+ .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background-color: $white;
+  border: $border-primary;
+  border-radius: $primary-radius;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: $primary-box-shadow;
+  font-weight: 600;
+  font-size: 14px;
+  color: $gray;
+
+  .option {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   cursor: pointer;
+   gap: 8px;
+
+   .imageStyles {
+    border-radius: 50%;
+   }
+
+   &:hover {
+    background-color: $hover-list-bg;
+
+    &::after {
+     content: '';
+     display: inline;
+     width: 16px;
+     height: 16px;
+     background-image: url('../../../public/assets/images/tick.jpg');
+     background-size: contain;
+     background-repeat: no-repeat;
+     right: 12px;
+     position: absolute;
+    }
+   }
+  }
+ }
+}
+
+//responsive main div-------------------
+@media screen and (min-width : 480px) {
+ .mainStyle {
+  max-width: 360px;
+ }
+}
