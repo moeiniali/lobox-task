@@ -23,3 +23,6 @@ Conclusion<br>
 This documentation provides an overview of the dropdown component and its structure within the React application. For further customization and usage details, please refer to the individual component files and their respective comments.<br>
 ---
 Feel free to modify any sections to better fit your project's specifics!<br>
+
+
+![alt text](public/assets/images/dropdown.png)
